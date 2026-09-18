@@ -1,0 +1,20 @@
+Assignment 1 
+
+In this assignment, the program uses fork() three times. Each fork() creates a new child process, so after three calls there are 8 processes in total. The child process gets 0 from fork(), while the parent gets the PID of the child. If fork() fails, it returns -1. The processes create a hierarchy because some child processes also run the next fork(). I printed the PID and PPID to see the relationship between the processes. This helped me understand how one parent can create many processes.
+
+Assignment 2 
+
+In this assignment, the program uses fork() to create one child process. The child uses execl() to run the ls command and show the files in the current directory. The execl() call replaces the child process with the new program. The parent uses wait and waits for the child to finish, and then it prints "Parent process done". The main system calls in this program are fork(), execl(), and wait().
+
+Assignment 3 
+In this assignment, the parent creates two child processes. The first child uses execl() to run ls, and the second child uses execl() to run date. The parent uses wait() so the first child finishes before the second child is created, and then it waits for the second child too. After both children finish, the parent prints "Parent process done". The process tree has one parent and two direct children. This assignment helped me understand how a parent can create several child processes and run different programs in them.
+
+Assignment 4
+In this assignment, the program creates one child with fork(. The child uses execl() to run the echo command and passes Hello from the child process" as an argument. The execl() function replaces the child program with echo, so the child prints the message. The parent waits for the child and then prints `"Parent process done"`. This assignment helped me understand how arguments can be passed to a new program using execl().
+
+Assignment 5
+In this assignment, the program creates a child process with fork(). The child uses execl() to run grep and searches for the word main inside test.txt. The matching lines are printed by the child process. The parent uses wait() and after the child finishes, it prints "Parent process completed". This assignment helped me understand how multiple arguments can be given to a program with execl() and how the parent and child processes work together.
+
+GitHub Repository
+https://github.com/Meruzhan-04/OpaeratingSystems_Homework.git
+
